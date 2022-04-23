@@ -20,7 +20,7 @@ describe('FacebookAuthenticationService', () => {
   const mockToken = { token: 'any_token' }
   const mockFacebookEmail = { email: 'fb@email.com' }
 
-  beforeEach(() => {
+  beforeAll(() => {
     loadFacebookUserApi = mock()
     userAccountRepo = mock()
     userAccountRepo.saveWithFacebook.mockResolvedValue({ id: 'any_account_id' })
@@ -31,6 +31,9 @@ describe('FacebookAuthenticationService', () => {
     })
     cryptography = mock()
     cryptography.generateToken.mockResolvedValue('any_generate_token')
+  })
+
+  beforeEach(() => {
     sut = new FacebookAuthenticationService(loadFacebookUserApi, userAccountRepo, cryptography)
   })
 
