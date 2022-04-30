@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2021",
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDirs": ["src", "tests"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
