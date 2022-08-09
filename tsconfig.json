@@ -20,6 +20,7 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "noImplicitAny": true,
+    "useUnknownInCatchVariables": false
   },
   "include": ["src", "tests"]
 }
